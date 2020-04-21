@@ -8,6 +8,7 @@
         "plugin:@typescript-eslint/recommended",
         "prettier/@typescript-eslint",
         "plugin:prettier/recommended",
+       
         "airbnb"
     ],
     "globals": {
@@ -29,11 +30,19 @@
         "prettier"
     ],
     "rules": {
+        "react/jsx-one-expression-per-line":"off",
+        "object-curly-newline":"off",
+        "camelcase":"off",
         "prettier/prettier":"error",
         "react-hooks/rules-of-hooks":"error",
         "react-hooks/exhaustive-deps":"warn",
         "react/jsx-filename-extension":[1,{"extensions":[".tsx"]}],
-        "import/prefer-default-exports":"off",
+        "import/prefer-default-export":"off",
+        "@typescript-eslint/explicit-function-return-type":[
+            "error",{
+                "allowExpressions":true
+            }
+        ],
         "import/extensions":[
             "error",
             "ignorePackages",{
